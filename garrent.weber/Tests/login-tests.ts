@@ -1,11 +1,11 @@
 import LoginPage from "../PageObjects/login-page";
 import ConfigurationManager from "../Configuration/configuration";
-import { axelUser, lukeUser } from "../Utilities/roles";
+import { garrettUser, viewer } from "../Utilities/roles";
 
 const configManager = new ConfigurationManager();
 
 fixture`My first fixture`.page(configManager.homePage).beforeEach(async t => {
-    t.ctx.user = axelUser;
+    t.ctx.user = garrettUser;
 
     // await t
     //     .setTestSpeed(1);

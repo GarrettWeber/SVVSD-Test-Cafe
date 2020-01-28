@@ -1,8 +1,8 @@
 import FeedPage from "../PageObjects/feed-page";
-import { axelUser, lukeUser } from "../Utilities/roles";
+import { garrettUser, viewer } from "../Utilities/roles";
 
-fixture`My first fixture`.page(`http://192.168.0.171/feed`).beforeEach(async t => {
-    t.ctx.user = axelUser;
+fixture`My first fixture`.page(`http://svvsd.cloud-staging.anark.com/feed`).beforeEach(async t => {
+    t.ctx.user = garrettUser;
 
     await t
         .useRole(t.ctx.user.role);
@@ -10,6 +10,10 @@ fixture`My first fixture`.page(`http://192.168.0.171/feed`).beforeEach(async t =
 
 const feedPage = new FeedPage();
 
+test('can create conversation', async t => {
+	
+
+});
 test('can add comment', async t => {
     const conversation = feedPage.getFirstConversation();
     await conversation.addComment('efgh');

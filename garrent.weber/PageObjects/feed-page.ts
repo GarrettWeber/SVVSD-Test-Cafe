@@ -38,6 +38,11 @@ export default class FeedPage {
 		await t.
 			expect(this.userInitialsIcon.textContent).eql(t.ctx.user.initials);
 	}
+	
+	async createConversation(){
+		await t.
+			click("#myActivitiesTitle.myActivityTitle[attribute]".first());
+			
 
 	async search(searchText?: string) {
 
